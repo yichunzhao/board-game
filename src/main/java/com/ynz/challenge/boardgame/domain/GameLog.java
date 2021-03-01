@@ -1,10 +1,13 @@
 package com.ynz.challenge.boardgame.domain;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+@Component
 public class GameLog {
 
     private Map<Person, LinkedList<Integer>> personDicesLog = new HashMap<>();
