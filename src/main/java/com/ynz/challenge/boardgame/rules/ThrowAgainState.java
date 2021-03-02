@@ -13,7 +13,7 @@ import com.ynz.challenge.boardgame.rules.context.AbstractContext;
  * On this state:
  *
  * if you throw a 6, then you get an extra throw, but the first 6 is not accumulated.
- * if you throw a 6, then a 4; you have have to go back to the unqualified state; you have to achieve a 6 first.
+ * if you throw a 6, then a 4; you have to go back to the unqualified state; you have to achieve a 6 first.
  * if you throw a 4, then sum -4
  * if you throw a 1,2,3,5 then sum positively.
  */
