@@ -2,6 +2,7 @@ package com.ynz.challenge.boardgame.rules;
 
 import com.ynz.challenge.boardgame.domain.Cup;
 import com.ynz.challenge.boardgame.domain.Dice;
+import com.ynz.challenge.boardgame.rules.context.AbstractContext;
 
 /**
  * a player is ready to go, but didn't get number 6 yet.

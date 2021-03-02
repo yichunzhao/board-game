@@ -2,6 +2,7 @@ package com.ynz.challenge.boardgame.rules;
 
 import com.ynz.challenge.boardgame.domain.Cup;
 import com.ynz.challenge.boardgame.domain.Dice;
+import com.ynz.challenge.boardgame.rules.context.AbstractContext;
 
 /**
  * After getting first 6, then this player becoming qualified to accumulate score.

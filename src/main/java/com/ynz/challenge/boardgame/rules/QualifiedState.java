@@ -1,6 +1,7 @@
 package com.ynz.challenge.boardgame.rules;
 
 import com.ynz.challenge.boardgame.domain.Cup;
+import com.ynz.challenge.boardgame.rules.context.AbstractContext;
 
 /**
  *  after a player achieving the first 6, he become a qualified player.

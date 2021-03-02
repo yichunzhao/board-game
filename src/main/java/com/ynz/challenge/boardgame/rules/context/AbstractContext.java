@@ -1,4 +1,6 @@
-package com.ynz.challenge.boardgame.rules;
+package com.ynz.challenge.boardgame.rules.context;
+
+import com.ynz.challenge.boardgame.rules.State;
 
 public abstract class AbstractContext {
     protected State currentState;
