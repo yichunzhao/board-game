@@ -14,6 +14,18 @@ public class AppConfig {
     @Value("${game.player.count}")
     private int count;
 
+    @Value("${game.player.name_a}")
+    private String nameA;
+
+    @Value("${game.player.name_b}")
+    private String nameB;
+
+    @Value("${game.player.name_c}")
+    private String nameC;
+
+    @Value("${game.player.name_d}")
+    private String nameD;
+
     @Bean
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
@@ -21,10 +33,10 @@ public class AppConfig {
 
     @Bean("allPlayers")
     public List<Person> players() {
-        Person personA = new Person("A");
-        Person personB = new Person("B");
-        Person personC = new Person("C");
-        Person personD = new Person("D");
+        Person personA = new Person(nameA);
+        Person personB = new Person(nameB);
+        Person personC = new Person(nameC);
+        Person personD = new Person(nameD);
 
         return Arrays.asList(personA, personB, personC, personD);
     }
