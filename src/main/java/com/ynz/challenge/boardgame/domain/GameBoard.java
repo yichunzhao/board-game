@@ -66,7 +66,7 @@ public class GameBoard {
         while (!hasWinner()) {
             for (Person person : players) {
                 BoardGameContext context = personBoardGameContextMap.get(person);
-                log.info("Player: " + person.getName() + " >> start to play ...");
+                log.info(" Player: " + person.getName() + " >> start to play ...");
                 context.play();
                 log.info(" Total score: " + context.getTotalScore());
             }

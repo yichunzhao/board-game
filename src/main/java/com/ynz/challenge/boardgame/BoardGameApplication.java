@@ -1,22 +1,16 @@
 package com.ynz.challenge.boardgame;
 
 import com.ynz.challenge.boardgame.domain.GameBoard;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class BoardGameApplication implements CommandLineRunner {
-    @Autowired
-    private GameBoard board;
+public class BoardGameApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BoardGameApplication.class, args);
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
+        ConfigurableApplicationContext context = SpringApplication.run(BoardGameApplication.class, args);
+        GameBoard board = context.getBean(GameBoard.class);
         board.playingTogether();
     }
 
