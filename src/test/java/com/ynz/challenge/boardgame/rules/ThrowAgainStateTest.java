@@ -55,7 +55,7 @@ class ThrowAgainStateTest {
 
 
     @Test
-    void givenScore4_KeepCurrentState() {
+    void givenScore4_KeepCurrentStateAndSumNegatively() {
         Dice dice = new Dice();
         dice.setScore(4);
 
@@ -73,7 +73,7 @@ class ThrowAgainStateTest {
     }
 
     @Test
-    void givenScore2_KeepCurrentState() {
+    void givenScore2_KeepCurrentStateSumPositively() {
         Dice dice = new Dice();
         dice.setScore(2);
 
