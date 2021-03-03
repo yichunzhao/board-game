@@ -6,9 +6,8 @@ import com.ynz.challenge.boardgame.rules.context.AbstractContext;
 
 /**
  * After getting first 6, then this player becoming qualified to accumulate score.
- * however he/she have to throw dice again, to determine a starting point.
  * <p>
- * Then moving into a qualified throwing again state.
+ * The player have to throw the dice again, to determine a starting point, referred as a throwing-again state.
  * <p>
  * On this state:
  * <p>
