@@ -7,11 +7,11 @@ import com.ynz.challenge.boardgame.rules.context.AbstractContext;
 /**
  * After getting first 6, then this player becoming qualified to accumulate score.
  * however he/she have to throw dice again, to determine a starting point.
- *
+ * <p>
  * Then moving into a qualified throwing again state.
- *
+ * <p>
  * On this state:
- *
+ * <p>
  * if you throw a 6, then you get an extra throw, but the first 6 is not accumulated.
  * if you throw a 6, then a 4; you have to go back to the unqualified state; you have to achieve a 6 first.
  * if you throw a 4, then sum -4
@@ -35,6 +35,8 @@ public class ThrowAgainState implements State {
         if (score == 6) {
             //score 6, getting an extra dice rolling
             int extraScore = cup.shake().getScore();
+            //a 6 followed by a 4; have to roll another 6 before start accumulating.
+            //so go back to unqualified state
             if (extraScore == 4) {
                 context.setNextState(new UnqualifiedState(cup));
                 return;
@@ -44,8 +46,7 @@ public class ThrowAgainState implements State {
             context.sum(extraScore);
             context.setNextState(this);
         }
-        //a 6 followed by a 4; have to roll another 6 before start accumulating.
-        //so go back to unqualified state
+        //4 leads to a penalty -4
         else if (score == 4) {
             context.sum(-4);
             context.setNextState(this);
